@@ -1,8 +1,5 @@
-﻿__pycache__/
-*.env
-node_modules/
+﻿.terraform/
+*.tfstate
+*.tfstate.backup
+*.tfvars
 .DS_Store
-.vscode/
-*.log
-dist/
-build/

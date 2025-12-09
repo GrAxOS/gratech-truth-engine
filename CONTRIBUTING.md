@@ -1,5 +1,3 @@
-﻿# Contributing to GraTech Truth Engine
+﻿# Contributing to Cloud Orchestrator
 
-1. Fork the repo
-2. Create a feature branch
-3. Submit a PR.
+We follow GitOps practices.
