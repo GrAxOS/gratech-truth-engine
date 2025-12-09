@@ -1,0 +1,18 @@
+﻿version: '3.8'
+services:
+  api:
+    build: ./backend
+    container_name: gratech-truth-api
+    ports: ["8000:8000"]
+    environment: [DATABASE_URL=postgresql://user:pass@db:5432/truth]
+  frontend:
+    image: node:18-alpine
+    container_name: gratech-dashboard
+    ports: ["3000:3000"]
+  db:
+    image: postgres:15-alpine
+    environment: [POSTGRES_USER=user, POSTGRES_PASSWORD=pass]
+  ai-engine:
+    image: tensorflow/serving
+    ports: ["8501:8501"]
+networks: {gratech-net: {driver: bridge}}
